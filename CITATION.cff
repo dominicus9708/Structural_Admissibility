@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility repository, cite the associated manuscript and the software release."
+title: "Formation Axiom System: Dimensional-Structural Describability — Reproducibility Package"
+type: software
+authors:
+  - family-names: "Kwon"
+    given-names: "Dominicus"
+repository-code: "https://github.com/dominicus9708/Structural_Admissibility"
+license: MIT
+version: "2.2.0"
+date-released: "2026-08-06"

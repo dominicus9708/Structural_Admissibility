@@ -1,0 +1,19 @@
+{
+  "d2_first_branching_index": 3,
+  "d2_stage_profile": [
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "expected_numeric_claims_verified": true,
+  "indexed_first_branching_index": 5,
+  "noninjective_composition_witness_verified": true,
+  "one_point_model_satisfies_displayed_closure": true,
+  "scope": "finite computational witnesses only; general theorems remain manuscript proofs",
+  "stage_4_is_not_an_independent_first_branch_in_supplied_profiles": true
+}
