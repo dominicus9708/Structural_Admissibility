@@ -1,0 +1,27 @@
+{
+  "title": "Formation Axiom System: Dimensional-Structural Describability — Reproducibility Package",
+  "upload_type": "software",
+  "description": "Standard-library Python reproduction and proof-audit companion for the finite constructions in Formation Axiom System: Dimensional-Structural Describability. The package reconstructs the one-point and D2 witnesses, the synthetic indexed 3 x 3 witness, a non-injective finite-sum composition witness, and the reported counts 768, 1536, 387, 62, and 127. General set-theoretic proofs remain in the manuscript.",
+  "creators": [
+    {
+      "name": "Kwon, Dominicus"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "Dimensional-Structural Describability",
+    "formation axiom system",
+    "structural admissibility",
+    "finite witness",
+    "reproducibility",
+    "proof audit"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/dominicus9708/Structural_Admissibility",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
