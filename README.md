@@ -1,14 +1,27 @@
-# Structural Admissibility and Formation Axiom System — reproducibility repository
+# Finite Square-Lattice Enumeration for Structural Admissibility
 
-This repository contains standard-library Python packages for two connected finite-audit layers of Dimensional-Structural Describability (DSD), authored by Kwon Dominicus.
+This repository contains the standard-library Python replication package for the exhaustive enumeration used in the manuscript:
 
-## Packages
+> *Structural Admissibility: An Axiomatic Framework for Boundary-Compatible Descriptions*
 
-### 1. Structural-admissibility square-lattice enumeration
+## What is reproduced
 
-The original root package exhaustively examines all `2^9 = 512` selected domains of the finite `3 x 3` square lattice and reproduces the induced-relation distribution, the total of `21,799` admissible configurations, and the finite failure witnesses stated in the structural-admissibility manuscript.
+The package exhaustively examines all `2^9 = 512` selected domains of the finite `3 x 3` square lattice. For a selected domain `S`, the manuscript's carrier-exact finite realization admits every subset of the induced relation set `R_S` and fixes the boundary label of every exposed relation to `blocked`. The package verifies:
 
-Run from the repository root:
+- the induced-relation distribution `N_m`;
+- the exhaustive total of `21,799` admissible configurations;
+- the three finite failure-witness verdicts stated in the manuscript.
+
+This repository material reproduces a finite computational enumeration. It does not replace the formal proofs of the general structural-admissibility criterion, structural-isomorphism invariance, or conditional closure results.
+
+## Requirements
+
+- Python 3.10 or later
+- No third-party dependencies
+
+## Run
+
+From this directory:
 
 ```powershell
 python src\enumerate_square_lattice.py --output-dir results
@@ -16,27 +29,14 @@ python src\verify_enumeration.py --results-dir results
 python -m unittest discover -s tests -v
 ```
 
-### 2. Formation Axiom System finite witnesses
+## Outputs
 
-The [`formation_axiom_system`](formation_axiom_system/) package accompanies:
+- `results/enumeration_summary.json`
+- `results/enumeration_distribution.csv`
+- `results/finite_failure_witnesses.json`
 
-> *Formation Axiom System: Dimensional-Structural Describability*
-
-It reproduces the one-point, D2, non-injective-composition, and synthetic indexed finite witnesses, including the reported values `768`, `1536`, `387`, `62`, and `127`.
-
-Run from the repository root:
-
-```powershell
-python formation_axiom_system\src\formation_axiom_reproduction.py --output-dir formation_axiom_system\results
-python formation_axiom_system\src\verify_formation_axiom_results.py --results-dir formation_axiom_system\results
-python -m unittest discover -s formation_axiom_system\tests -v
-```
+The expected total is `21,799` and the distribution is recorded in `results/enumeration_distribution.csv`.
 
 ## Scope
 
-These programs reproduce explicitly finite constructions and numerical claims. They do not replace the general proofs in the manuscripts and do not claim empirical validation, syntactic completeness, categoricity, or decidability.
-
-## Requirements
-
-- Python 3.10 or later
-- No third-party dependencies
+The finite square-lattice realization is explicitly **carrier-exact**: its active carrier equals its selected domain. The manuscript separately provides a two-element example to show that the general framework also allows a selected domain to contain inactive structural material, so that `C_p` can be a proper subset of `S_p`.
